@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bejv65nlsapol"]
+
+[ext_resource type="PackedScene" uid="uid://btuy12cb36xdv" path="res://battle.tscn" id="1_63w4r"]
+
+[sub_resource type="GDScript" id="GDScript_xehsl"]
+
+[node name="Main" type="Node2D"]
+script = SubResource("GDScript_xehsl")
+
+[node name="Battle" parent="." instance=ExtResource("1_63w4r")]
+position = Vector2(200, 50)

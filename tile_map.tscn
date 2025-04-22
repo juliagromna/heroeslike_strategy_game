@@ -1,0 +1,74 @@
+[gd_scene load_steps=13 format=3 uid="uid://oatm1y0uhyp1"]
+
+[ext_resource type="Texture2D" uid="uid://76s8yd0vsrjo" path="res://Assets/Tiles/mountains2.png" id="1_0st11"]
+[ext_resource type="Texture2D" uid="uid://rk8skrx6op4o" path="res://Assets/Tiles/open.png" id="1_vd1em"]
+[ext_resource type="Script" path="res://tile_map.gd" id="2_hbhrf"]
+[ext_resource type="Texture2D" uid="uid://dyjk8cp1j6q4f" path="res://Assets/Tiles/mountains1.png" id="3_ywh2o"]
+[ext_resource type="Texture2D" uid="uid://bfjmss3y5vaud" path="res://Assets/Tiles/trees.png" id="4_khmao"]
+[ext_resource type="Texture2D" uid="uid://dk8mg44po5bjy" path="res://Assets/Tiles/wood.png" id="5_i0dok"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eq24c"]
+resource_name = "grass"
+texture = ExtResource("1_vd1em")
+texture_region_size = Vector2i(128, 128)
+0:0/next_alternative_id = 7
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/modulate = Color(0.783523, 0.783523, 0.783523, 1)
+0:0/2 = 2
+0:0/2/modulate = Color(0.493545, 0.493546, 0.493545, 1)
+0:0/3 = 3
+0:0/3/modulate = Color(0.259294, 0.259294, 0.259294, 1)
+0:0/4 = 4
+0:0/4/modulate = Color(1, 1, 0.513726, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10y8m"]
+resource_name = "obstacle1"
+texture = ExtResource("1_0st11")
+texture_region_size = Vector2i(128, 128)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vesk0"]
+resource_name = "obstacle2"
+texture = ExtResource("3_ywh2o")
+texture_region_size = Vector2i(128, 128)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y6pln"]
+resource_name = "obstacle3"
+texture = ExtResource("4_khmao")
+texture_region_size = Vector2i(128, 128)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43gok"]
+resource_name = "obstacle4"
+texture = ExtResource("5_i0dok")
+texture_region_size = Vector2i(128, 128)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+
+[sub_resource type="TileSet" id="TileSet_d7ot1"]
+tile_shape = 3
+tile_layout = 1
+tile_size = Vector2i(96, 112)
+sources/1 = SubResource("TileSetAtlasSource_10y8m")
+sources/0 = SubResource("TileSetAtlasSource_eq24c")
+sources/2 = SubResource("TileSetAtlasSource_vesk0")
+sources/3 = SubResource("TileSetAtlasSource_y6pln")
+sources/4 = SubResource("TileSetAtlasSource_43gok")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_d7ot1")
+format = 2
+script = ExtResource("2_hbhrf")
