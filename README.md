@@ -1,13 +1,8 @@
-# Hexagonal Game
+# Strategy Game
 
-Very simple demo showing a hexagonal TileMap and TileSet.
+Strategy game on hexagonal map based on battle gameplay in Heroes of Might and Magic III.
 
 Language: GDScript
 
 Renderer: Compatibility
 
-Check out this demo on the asset library: https://godotengine.org/asset-library/asset/111
-
-## Screenshots
-
-![Screenshot](screenshots/hex.png)
